@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgray;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+     bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+body {
+        background-image: url(images/labdesk.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 5% 29%;
+        background-size: 700px 300px;
+    }
+
+    .mover {
+        width:100px; height:100px; line-height:4em; margin:10px;                                                padding:10px; float:left; 
+             border:none; text-align:center;  
+    }
+    .stay {
+    width: 30px; height: 100px; line-height:4em; margin: 10px;
+    padding: 10px; float: left; 
+    border: none; text-align:center;
+    }
+    #boxA{background-image: url(images/microscope.png)
+             }
+    #boxB{background-image: url(images/needle.jpeg)
+             }
+    #boxC{background-image: url(images/rat.png)
+             }
+    #boxD{background-image: url(images/bunsenburnersimple.png)
+             }
+    #boxE{background-image: url(images/rstrain.jpg)
+            }
+    #boxF{background-image: url(images/sstrain.jpg)
+            }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+<script>
+    <div id="box1" ondragover="event.preventDefault()"      ondrop="dropWord(event)" > 
+    <div class="mover" id="boxA" draggable="true"      ondragstart="dragWord(event)" ></div> 
+                    </div>
+    <div id="box2" ondragover="event.preventDefault()"     ondrop="dropWord(event)"> 
+    <div class="mover" id="boxB" draggable="true"      ondragstart="dragWord(event)"></div> 
+                    </div>
+    <div id="box3" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+    <div class="mover" id="boxC" draggable="true"      ondragstart="dragWord(event)"></div> 
+                    </div> 
+    <div id="box4" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+    <div class="mover" id="boxD" draggable="true"      ondragstart="dragWord(event)"></div> 
+                    </div> 
+    <div id="box5" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+    <div class="stay" id="boxE" draggable="true"     ondragstart="dragWord(event)"></div> 
+     <div class="tooltip"><img src="images/rtesttube.png" width="30" height="100">
+        <label class="tooltiptext">R-Strain</label>               </div> 
+    <div id="box6" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+    <div class="stay" id="boxF" draggable="true"     ondragstart="dragWord(event)">
+    <div class="tooltip"><img src="images/stesttube.png" width="30" height="100">
+        <label class="tooltiptext">S-Strain</label></div> 
+                    </div> 
+</script>
+</head>
+<body>
+
+<h2>Griffith's Laboratory</h2>
+<p>Drag items around the lab to experiment with what Griffith had at his disposal.  Write in your notebook any significant findings you discover.  (The lab rat and the microscope cannot be dragged, but you can drop items onto them.  If the rat dies, reload the page to get a live rat, or you can look at the blood under the microscope)</p>
+
+</body>
+</html>

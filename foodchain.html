@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+    <html> 
+    <head>
+         <style type="text/css">
+         .mover {
+             width:100px; height:100px; line-height:4em; margin:10px;                           padding:5px; float:left; 
+             border:none; text-align:center;  
+             } 
+             .stayer {
+                 width: 30px; height: 100px; line-height: 4em; margin:10px;
+                 padding: 5px; float: left;
+                 border:none; text-align:center;
+             }
+             #boxA{
+                background-image: url(images/microscope.png);  
+                    background-size:  100px 100px;
+                 background-repeat: no-repeat;
+             }
+             #boxB{
+                background-image: url(images/rat.png);
+                background-size:  100px 100px;
+                 background-repeat: no-repeat;
+             }
+             #boxC{
+                background-image: url(images/needle.jpeg);
+                  background-size:  100px 100px;
+                 background-repeat: no-repeat;
+             }
+             #boxD{
+                background-image: url(images/bunsenburnersimple.png);
+                  background-size:  100px 100px;
+                 background-repeat: no-repeat;
+             }
+             #boxE{
+                background-image: url(images/rtesttube.png);
+                  background-size:  30px 100px;
+                 background-repeat: no-repeat;
+              }
+             #boxF{
+                 background-image: url(images/stesttube.png);
+                  background-size:  30px 100px;
+                 background-repeat: no-repeat;
+             }
+             body {
+        background-image: url(images/labdesk.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 5% 29%;
+        background-size: 700px 300px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgray;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+     bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+          </style>
+<script type="text/javascript">
+               function dragWord(dragEvent){
+                  dragEvent.dataTransfer.setData("Id",    dragEvent.target.id+"|"+dragEvent.target.parentNode.id);
+                   //if (document.getElementById())
+                 }                   
+               function dropWord(dropEvent){ 
+                var dropData = dropEvent.dataTransfer.getData("Id");
+                dropItems = dropData.split("|"); 
+                var prevElem = document.getElementById(dropItems[1]); 
+                prevElem.getElementsByTagName("div")[0].id = dropEvent.target.id;              
+                dropEvent.target.id = dropItems[0]; 
+                dropEvent.preventDefault(); 
+                } 
+</script> 
+</head> 
+<body> 
+    <h2>Griffith's Laboratory</h2>
+    <div><em>Drag items around the lab to experiment with what Griffith had at his disposal.  Write in your notebook any significant findings you discover.  (The lab rat and the microscope cannot be dragged, but you can drop items onto them.  If the rat dies, reload the page to get a live rat, or you can look at the blood under the microscope)</em></div>
+    
+<div id="box1" ondragover="event.preventDefault()"      ondrop="dropWord(event)" > 
+    <div class="mover" id="boxA" draggable="true"      ondragstart="dragWord(event)" ></div>
+                    </div>
+<div id="box2" ondragover="event.preventDefault()"     ondrop="dropWord(event)"> 
+<div class="mover" id="boxB" draggable="true"      ondragstart="dragWord(event)"></div> 
+                    </div>
+<div id="box3" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+<div class="mover" id="boxC" draggable="true"      ondragstart="dragWord(event)"></div> 
+                    </div> 
+<div id="box4" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+<div class="mover" id="boxD" draggable="true"      ondragstart="dragWord(event)"></div> 
+                    </div> 
+<div id="box5" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+<div class="mover" id="boxE" draggable="true"     ondragstart="dragWord(event)"></div> 
+                    </div>   
+<div id="box6" ondragover="event.preventDefault()"      ondrop="dropWord(event)"> 
+<div class="mover" id="boxF" draggable="true"     ondragstart="dragWord(event)"></div> 
+                    </div> 
+            </body> 
+            </html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Effects - switchClass Demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  .toggler { width: 500px; height: 200px; position: relative; }
+  #button { padding: .5em 1em; text-decoration: none; }
+  #effect { position: relative; }
+  .newClass { width: 100px;  height: 100px; padding: 1em; letter-spacing: 0; margin: 0; background-image: url(images/needle.jpeg); background-size: 100px 100px; background-repeat: no-repeat;}
+  .anotherNewClass { text-indent: 40px; letter-spacing: .2em; width: 410px; height: 100px; padding: 30px; margin: 10px; font-size: 1.1em; background-image: url(images/bloodneedle.jpg); background-size: 100px 100px; background-repeat: no-repeat;}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#button" ).on( "click", function() {
+      $( ".newClass" ).switchClass( "newClass", "anotherNewClass", 1000 );
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="toggler">
+  <div id="effect" class="newClass ui-corner-all">
+  </div>
+</div>
+<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+ 
+ 
+</body>
+</html>

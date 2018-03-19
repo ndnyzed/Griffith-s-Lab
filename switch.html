@@ -1,0 +1,54 @@
+ <!DOCTYPE HTML>
+    <html> 
+    <head>
+         <style type="text/css">
+         .mover {
+             width:100px; height:100px; line-height:4em; margin:10px;                           padding:5px; float:left; 
+             border:none; text-align:center;  
+             } 
+#boxA{
+                background-image: url(images/rat.png);
+                background-size:  100px 100px;
+                background-repeat: no-repeat;
+             }
+#boxB{
+                background-image: url(images/needle.jpeg);
+                background-size:  100px 100px;
+                background-repeat: no-repeat;
+             }
+#boxC{
+        background-image: url(images/bloodneedle.jpg);
+                background-size:  100px 100px;
+                background-repeat: no-repeat;
+    }
+</style>
+<script>
+/*function bloodDraw(){
+document.addEventListener("dragstart", function(event) {
+    if (event.target.className=='boxA' {
+      then (x=document.getElementById("boxB");
+    x.style.backgroundImage='url=("images/bloodneedle.jpg")';
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <script src="//code.jquery.com/jquery-1.12.4.js">
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js">
+</script>
+        
+</head>
+<body>
+<div id="box1" ondragover="event.preventDefault()" ondrop="dropWord(event)" ondrop="bloodDraw()"> 
+    <div class="mover" id="boxA" draggable="true" ondragstart="dragWord(event)" ></div>
+                    </div>
+<div id="box2" ondragover="event.preventDefault()" ondrop="dropWord(event)"> 
+<div class="mover" id="boxB" draggable="true" ondragstart="dragWord(event)"></div> 
+    </div>
+<script>
+$('#boxA').on("drop", function(event, ui) {
+        $('this').attr('src', 'images/bloodneedle.jpg');
+    event.preventDefault();  
+    event.stopPropagation();
+});
+</script>
+</body>
+</html>
